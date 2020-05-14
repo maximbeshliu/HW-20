@@ -7,18 +7,16 @@ todoList.addEventListener('click', handleItemClick);
 
 
 function handleItemClick(event) {
-    const listItemRemoveBtn = document.querySelector(".remove");
+    let listItem = event.target.closest('li');
     const listCheckboxStatus = document.querySelector('.tick');
-    const listItem = document.querySelector('.todolist__item');
 
-    if (event.target === listItemRemoveBtn) {
+    if (event.target.classList.contains("remove")) {
         listItem.remove();
     }
-    if (listCheckboxStatus.checked) {
+
+    if (event.target.classList.contains("tick")) {
         listItem.classList.add('complete');
-    } else {
-        listItem.classList.remove('complete');
-    }
+    } else { listItem.classList.remove('complete'); }
 }
 
 
