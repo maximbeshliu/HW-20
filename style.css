@@ -58,3 +58,9 @@ h1 {
 .complete {
     border: 2px solid green;
 }
+
+.todos-text{
+display: flex;
+flex-flow: row;
+justify-content: space-between;
+}
